@@ -1,8 +1,7 @@
 import bottle
 import MySQL
 from bottle import  route, run, static_file, redirect, auth_basic, request, template
-
-
+from MySQL import GetAllAuthors
 # @route('/')
 # def default():
 #        redirect('/login')
@@ -13,9 +12,9 @@ from bottle import  route, run, static_file, redirect, auth_basic, request, temp
 def main_page():
      return static_file('main.html', root='./')
 
-GetAllAutors()
+GetAllAuthors()
 #################
-run(host='localhost', port=80, debug=True, reloader=True)
+run(host='0.0.0.0', port=80, debug=True, reloader=True)
 
 # test = {
 #     'protocol': ['p1','p2','p3'],
